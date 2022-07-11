@@ -1,0 +1,40 @@
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+command=/usr/lib/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+
+[usd2cont]
+label=U$CONT:
+command=curl https://api-dolar-argentina.herokuapp.com/api/contadoliqui | jq '.compra + " " + .venta' 
+interval=600
+
+[usd2cont]
+label=U$BLUE:
+command=curl https://api-dolar-argentina.herokuapp.com/api/dolarblue | jq '.compra + " " + .venta' 
+interval=600
+
+[load_average]
+interval=5
+separator=false
+
+[temperature]
+interval=5
+separator=false
+
+[cpu_usage]
+interval=5
+separator=false
+
+[memory]
+interval=5
+
+[battery]
+interval=30
+
+[time]
+command=date +'%m-%d %R'
+interval=60
