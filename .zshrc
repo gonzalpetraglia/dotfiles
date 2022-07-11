@@ -125,3 +125,4 @@ alias clone_review="GIT_SSH_COMMAND='ssh -i ~/.ssh/id_rsa_reviews' git clone"
 export PATH="$HOME/.poetry/bin:/etc/apache-maven-3.8.4/bin:/etc/Postman:$PATH"
 
 if [ -e /home/atix/.nix-profile/etc/profile.d/nix.sh ]; then . /home/atix/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+alias config='/usr/bin/git --git-dir=/home/gonzalo/.cfg/ --work-tree=/home/gonzalo'
